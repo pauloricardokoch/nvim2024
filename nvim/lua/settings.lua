@@ -1,5 +1,4 @@
 local set = vim.opt
-local cmd = vim.cmd
 
 set.expandtab = true
 set.smarttab = true

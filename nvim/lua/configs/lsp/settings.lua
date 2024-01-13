@@ -1,4 +1,9 @@
-local lspconfig = require("lspconfig")
+local status, lspconfig = pcall(require, "lspconfig")
+if not status then
+    return
+end
+
+local protocol = require("vim.lsp.protocol")
 
 local on_attach = function(client, bufnr)
     -- format on save
@@ -7,13 +12,11 @@ local on_attach = function(client, bufnr)
             group = vim.api.nvim_create_augroup("Format", { clear = true }),
             buffer = bufnr,
             callback = function()
-                vim.lsp.buf.formatting_seq_sync()
+                vim.lsp.buf.format()
             end,
         })
     end
 end
-
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 
 -- Lua
 lspconfig.lua_ls.setup {

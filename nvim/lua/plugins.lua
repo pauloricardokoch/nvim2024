@@ -66,6 +66,12 @@ return require("packer").startup(function(use)
     }
 
     -- DAP
+    use { "rcarriga/nvim-dap-ui",
+        requires = { "mfussenegger/nvim-dap" },
+        config = function()
+            require("configs/dap")
+        end
+    }
 
     -- Gitsigns
     use { "lewis6991/gitsigns.nvim",
