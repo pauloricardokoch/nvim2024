@@ -19,11 +19,10 @@ set.scrolloff = 5
 set.termguicolors = true
 
 set.cursorline = true
-set.colorcolumn = '80'
+set.colorcolumn = "80"
 set.number = true
 
 set.hidden = true
 set.clipboard = "unnamedplus"
-set.listchars = { space = '␣', tab = '▷▷' }
--- set.list = true
-cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
+--set.listchars = { space = "␣", tab = "▷▷" }
+--set.list = true
