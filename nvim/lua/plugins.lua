@@ -86,4 +86,11 @@ return require("packer").startup(function(use)
             require("configs/barbar")
         end
     }
+
+    -- Lualine
+    use {"nvim-lualine/lualine.nvim", 
+        config= function()
+            require("configs/lualine")
+        end
+    }
 end)
