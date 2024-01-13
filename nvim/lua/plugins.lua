@@ -23,7 +23,7 @@ return require("packer").startup(function(use)
     -- Theme
     use { "catppuccin/nvim", as = "catppuccin",
         config = function()
-            require("configs.theme")
+            require("configs/theme")
         end
     }
 
