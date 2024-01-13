@@ -6,13 +6,14 @@ end
 local protocol = require("vim.lsp.protocol")
 
 local on_attach = function(client, bufnr)
+    require "completion".on_attach(client)
     -- format on save
     if client.server_capabilities.documentFormattingProvider then
         vim.api.nvim_create_autocmd("BufWritePre", {
             group = vim.api.nvim_create_augroup("Format", { clear = true }),
             buffer = bufnr,
             callback = function()
-                vim.lsp.buf.format()
+                vim.lsp.buf.format({ async = true })
             end,
         })
     end
@@ -27,4 +28,8 @@ lspconfig.lua_ls.setup {
 
 -- Terraform
 
---
+-- Python
+
+-- React / Javascript / Typescritp
+
+-- Rust

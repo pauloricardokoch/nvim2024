@@ -88,8 +88,8 @@ return require("packer").startup(function(use)
     }
 
     -- Lualine
-    use {"nvim-lualine/lualine.nvim", 
-        config= function()
+    use { "nvim-lualine/lualine.nvim",
+        config = function()
             require("configs/lualine")
         end
     }
