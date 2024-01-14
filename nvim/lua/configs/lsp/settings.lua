@@ -24,12 +24,32 @@ lspconfig.lua_ls.setup {
 }
 
 -- Golang
+lspconfig.gopls.setup {
+    cmd = { 'gopls' },
+    settings = {
+        gopls = {
+            analyses = {
+                nilness = true,
+                unusedparams = true,
+                unusedwrite = true,
+                useany = true,
+            },
+            experimentalPostfixCompletions = true,
+            gofumpt = true,
+            staticcheck = true,
+            usePlaceholders = true,
+        },
+    },
+}
 
 -- Terraform
+lspconfig.terraformls.setup {}
+lspconfig.tflint.setup {}
 
 -- Python
 
 -- React / Javascript / Typescritp
+lspconfig.tsserver.setup {}
 
 -- Rust
 local rust_on_attach = function(client, bufnr)
