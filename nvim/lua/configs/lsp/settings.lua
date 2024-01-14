@@ -6,7 +6,6 @@ end
 local protocol = require("vim.lsp.protocol")
 
 local on_attach = function(client, bufnr)
-    require "completion".on_attach(client)
     -- format on save
     if client.server_capabilities.documentFormattingProvider then
         vim.api.nvim_create_autocmd("BufWritePre", {
@@ -33,3 +32,29 @@ lspconfig.lua_ls.setup {
 -- React / Javascript / Typescritp
 
 -- Rust
+local rust_on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+    require "completion".on_attach(client)
+end
+
+lspconfig.rust_analyzer.setup({
+    on_attach = rust_on_attach,
+    settings = {
+        ["rust-analyzer"] = {
+            imports = {
+                granularity = {
+                    group = "module",
+                },
+                prefix = "self",
+            },
+            cargo = {
+                buildScripts = {
+                    enable = true,
+                },
+            },
+            procMacro = {
+                enable = true
+            },
+        }
+    }
+})
