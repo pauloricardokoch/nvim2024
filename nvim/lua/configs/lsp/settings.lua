@@ -25,6 +25,7 @@ lspconfig.lua_ls.setup {
 
 -- Golang
 lspconfig.gopls.setup {
+    on_attach = on_attach,
     cmd = { 'gopls' },
     settings = {
         gopls = {
@@ -43,13 +44,19 @@ lspconfig.gopls.setup {
 }
 
 -- Terraform
-lspconfig.terraformls.setup {}
-lspconfig.tflint.setup {}
+lspconfig.terraformls.setup {
+    on_attach = on_attach
+}
+lspconfig.tflint.setup {
+    on_attach = on_attach
+}
 
 -- Python
 
 -- React / Javascript / Typescritp
-lspconfig.tsserver.setup {}
+lspconfig.tsserver.setup {
+    on_attach = on_attach
+}
 
 -- Rust
 local rust_on_attach = function(client, bufnr)
