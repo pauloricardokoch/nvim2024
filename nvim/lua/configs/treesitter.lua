@@ -32,6 +32,7 @@ ts.setup({
         "terraform",
         "python",
         "bash",
+        "vimdoc",
     },
     rainbow = {
         enable = true,

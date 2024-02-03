@@ -27,20 +27,22 @@ return require("packer").startup(function(use)
         end
     }
 
-    -- Lsp
-    use { "neovim/nvim-lspconfig",
-        config = function()
-            require("configs/lsp/settings")
-            require("configs/lsp/mappings")
-        end
-    }
-
     -- Mason
     use {
-        "williamboman/mason.nvim",
-        config = function()
-            require("configs/lsp/mason")
-        end
+        { "williamboman/mason.nvim",
+            config = function()
+                require("configs/mason")
+            end
+        },
+        "williamboman/mason-lspconfig.nvim",
+
+        -- Lsp
+        { "neovim/nvim-lspconfig",
+            config = function()
+                require("configs/lsp/settings")
+                require("configs/lsp/mappings")
+            end
+        }
     }
 
     -- Fuzzy search
