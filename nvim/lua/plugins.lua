@@ -35,6 +35,14 @@ return require("packer").startup(function(use)
         end
     }
 
+    -- Mason
+    use {
+        "williamboman/mason.nvim",
+        config = function()
+            require("configs/lsp/mason")
+        end
+    }
+
     -- Fuzzy search
     use { "ms-jpq/coq_nvim",
         branch = "coq",
