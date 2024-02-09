@@ -1,4 +1,6 @@
 local status, gitsigns = pcall(require, "gitsigns")
+local map = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
 
 if not status then
     return
@@ -22,7 +24,7 @@ gitsigns.setup({
         follow_files = true,
     },
     attach_to_untracked = true,
-    current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
+    current_line_blame = true, -- Toggle with `:Gitsigns toggle_current_line_blame`
     current_line_blame_opts = {
         virt_text = true,
         virt_text_pos = "eol", -- "eol" | "overlay" | "right_align"
@@ -46,3 +48,5 @@ gitsigns.setup({
         enable = false,
     },
 })
+
+map("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", opts)

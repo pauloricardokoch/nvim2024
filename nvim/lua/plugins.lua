@@ -90,6 +90,9 @@ return require("packer").startup(function(use)
         end
     }
 
+    -- Fugitive
+    use { "tpope/vim-fugitive" }
+
     -- Top bar
     use { "romgrk/barbar.nvim",
         config = function()
