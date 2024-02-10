@@ -62,7 +62,7 @@ return require("packer").startup(function(use)
         },
         config = function()
             require("telescope").load_extension("live_grep_args")
-            require("configs/tlescope")
+            require("configs/telescope")
         end
     }
 
