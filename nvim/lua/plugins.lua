@@ -95,11 +95,11 @@ return require("packer").startup(function(use)
     use { "tpope/vim-fugitive" }
 
     -- Top bar
-    use { "romgrk/barbar.nvim",
-        config = function()
-            require("configs/barbar")
-        end
-    }
+    --    use { "romgrk/barbar.nvim",
+    --        config = function()
+    --            require("configs/barbar")
+    --        end
+    --    }
 
     -- Lualine
     use { "nvim-lualine/lualine.nvim",
