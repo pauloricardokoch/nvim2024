@@ -14,11 +14,6 @@ return require("packer").startup(function(use)
 
     -- Nvim tree
     use "nvim-tree/nvim-web-devicons"
-    use { "nvim-tree/nvim-tree.lua",
-        config = function()
-            require("configs/nvim-tree")
-        end
-    }
 
     -- Theme
     use { "catppuccin/nvim", as = "catppuccin",
