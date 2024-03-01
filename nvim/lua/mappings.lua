@@ -3,7 +3,7 @@ local opts = { noremap = true, silent = true }
 
 -- leader
 vim.g.mapleader = " "
-map("n", "<leader>e", ":Explore <CR>", opts)
+map("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- change panels
 map("n", "<C-h>", "<C-w>h", opts)
