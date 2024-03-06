@@ -14,11 +14,11 @@ return require("packer").startup(function(use)
 
     -- Nvim tree
     use "nvim-tree/nvim-web-devicons"
---    use { "nvim-tree/nvim-tree.lua",
---        config = function()
---            require("configs/nvim-tree")
---        end
---    }
+    --    use { "nvim-tree/nvim-tree.lua",
+    --        config = function()
+    --            require("configs/nvim-tree")
+    --        end
+    --    }
 
     -- Theme
     use { "catppuccin/nvim", as = "catppuccin",
@@ -26,6 +26,7 @@ return require("packer").startup(function(use)
             require("configs/theme")
         end
     }
+    use { "rose-pine/neovim", as = "rose-pine" }
 
     -- Mason
     use {

@@ -43,4 +43,21 @@ require("catppuccin").setup({
     },
 })
 
-cmd [[colorscheme catppuccin]]
+require("rose-pine").setup({
+    variant = "main",
+    styles = {
+        transparency = true,
+    }
+})
+
+function SetTheme(t)
+    t = t or "rp"
+    if t == "rp" then
+        cmd [[ colorscheme rose-pine ]]
+        return
+    end
+
+    cmd [[ colorscheme catppuccin ]]
+end
+
+SetTheme()
