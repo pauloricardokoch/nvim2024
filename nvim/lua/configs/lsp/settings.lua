@@ -85,3 +85,8 @@ lspconfig.rust_analyzer.setup({
         }
     }
 })
+
+-- Python
+lspconfig.pylsp.setup({
+on_attach=on_attach
+})
