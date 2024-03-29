@@ -50,9 +50,10 @@ require("rose-pine").setup({
     }
 })
 
-function SetTheme(t)
-    t = t or "cat"
-    if t == "rp" then
+local theme = false
+function Toggle_theme()
+    theme = not theme
+    if theme then
         cmd [[ colorscheme rose-pine ]]
         return
     end
@@ -60,4 +61,4 @@ function SetTheme(t)
     cmd [[ colorscheme catppuccin ]]
 end
 
-SetTheme()
+Toggle_theme()

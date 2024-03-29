@@ -1,5 +1,13 @@
 local set = vim.opt
 
+local rn = true
+function Toggle_rn()
+    set.relativenumber = rn
+    rn = not rn
+end
+
+Toggle_rn()
+
 set.expandtab = true
 set.smarttab = true
 set.shiftwidth = 4
@@ -23,5 +31,12 @@ set.number = true
 
 set.hidden = true
 set.clipboard = "unnamedplus"
---set.listchars = { space = "␣", tab = "▷▷" }
---set.list = true
+set.listchars = { space = "␣", tab = "▷▷" }
+
+local lst = true
+function Toggle_list()
+    set.list = lst
+    lst = not lst
+end
+
+Toggle_list()
