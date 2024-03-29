@@ -2,19 +2,22 @@ local dap = require("dap")
 local dapui = require("dapui")
 local set = vim.keymap.set
 
-dap.adapters.go = {
-    type = "executable",
-    command = "node",
-    args = { "/opt/vscode-go/dist/debugAdapter.js" },
-}
+require('dap-go').setup()
+
+dap.adapters.go = function(callback, config)
+    -- Wait for delve to start
+    vim.defer_fn(function()
+            callback({ type = "server", host = "127.0.0.1", port = "4000" })
+        end,
+        100)
+end
+
 dap.configurations.go = {
     {
         type = "go",
-        name = "Attach",
-        request = "attach",
-        processId = require("dap.utils").pick_process,
-        program = "${workspaceFolder}",
-        dlvToolPath = vim.fn.exepath("dlv")
+        name = "Debug",
+        request = "launch",
+        program = "${file}",
     },
     {
         type = "go",
