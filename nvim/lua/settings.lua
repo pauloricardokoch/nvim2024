@@ -31,7 +31,7 @@ set.number = true
 
 set.hidden = true
 set.clipboard = "unnamedplus"
-set.listchars = { space = "␣", tab = "▷▷" }
+set.listchars = { eol = "§", tab = "¤›", extends = "»", precedes = "«", nbsp = "‡" }
 
 local lst = true
 function Toggle_list()

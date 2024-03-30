@@ -50,7 +50,7 @@ require("rose-pine").setup({
     }
 })
 
-local theme = false
+local theme = true
 function Toggle_theme()
     theme = not theme
     if theme then
