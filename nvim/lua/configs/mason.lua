@@ -8,6 +8,6 @@ require("mason-lspconfig").setup({
         "terraformls",
         "tflint",
         "tsserver",
-        "pylsp",
+--        "pylsp",
     },
 })

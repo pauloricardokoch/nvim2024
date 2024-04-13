@@ -52,6 +52,9 @@ lspconfig.tflint.setup {
 }
 
 -- Python
+lspconfig.pylsp.setup {
+    on_attach = on_attach,
+}
 
 -- React / Javascript / Typescritp
 lspconfig.tsserver.setup {
@@ -88,5 +91,5 @@ lspconfig.rust_analyzer.setup({
 
 -- Python
 lspconfig.pylsp.setup({
-on_attach=on_attach
+    on_attach = on_attach
 })
