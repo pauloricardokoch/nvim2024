@@ -50,15 +50,17 @@ require("rose-pine").setup({
     }
 })
 
-local theme = true
-function Toggle_theme()
-    theme = not theme
-    if theme then
-        cmd [[ colorscheme rose-pine ]]
-        return
-    end
-
+function Set_Catppuccin()
     cmd [[ colorscheme catppuccin ]]
 end
 
-Toggle_theme()
+function Set_Rosepine()
+    cmd [[ colorscheme rose-pine ]]
+end
+
+function Set_Lunaperche()
+    cmd [[ colorscheme lunaperche ]]
+    cmd [[ hi Normal guibg=NONE ctermbg=NONE ]]
+end
+
+Set_Lunaperche()
