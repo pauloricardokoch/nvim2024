@@ -33,7 +33,7 @@ set.hidden = true
 set.clipboard = "unnamedplus"
 set.listchars = { eol = "§", tab = "¤›", extends = "»", precedes = "«", nbsp = "‡" }
 
-local lst = true
+local lst = false
 function Toggle_list()
     set.list = lst
     lst = not lst
