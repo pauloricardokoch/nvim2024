@@ -18,14 +18,14 @@ require("catppuccin").setup({
         conditionals = { "italic" },
         loops = {},
         functions = {},
-        keywords = {},
+        keywords = { "bold" },
         strings = {},
         variables = {},
         numbers = {},
         booleans = {},
         properties = {},
-        types = {},
-        operators = {},
+        types = { "italic" },
+        operators = { "bold" },
     },
     color_overrides = {},
     custom_highlights = {},
@@ -63,4 +63,9 @@ function Set_Lunaperche()
     cmd [[ hi Normal guibg=NONE ctermbg=NONE ]]
 end
 
-Set_Lunaperche()
+function Set_Quiet()
+    cmd [[ colorscheme quiet ]]
+    cmd [[ hi Normal guibg=NONE ctermbg=NONE ]]
+end
+
+Set_Catppuccin()
