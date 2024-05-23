@@ -2,6 +2,8 @@ local dap = require("dap")
 local dapui = require("dapui")
 local set = vim.keymap.set
 
+require("nvim-dap-virtual-text").setup()
+require("dapui").setup()
 require('dap-go').setup()
 
 dap.adapters.go = function(callback, config)
@@ -33,6 +35,8 @@ dap.configurations.go = {
 
 set("n", "du", dapui.toggle, {})
 set("n", "ds", dap.continue, {})
-set("n", "dt", dap.toggle_breakpoint, {})
+set("n", "db", dap.toggle_breakpoint, {})
 
-require("dapui").setup()
+
+vim.fn.sign_define("DapBreakpoint", { text = "🔴", texthl = "", linehl = "", numhl = "" })
+vim.fn.sign_define("DapStopped", { text = "→", texthl = "", linehl = "", numhl = "" })
