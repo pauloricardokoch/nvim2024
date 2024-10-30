@@ -52,9 +52,9 @@ lspconfig.tflint.setup {
 }
 
 -- Python
-lspconfig.pylsp.setup {
+lspconfig.pylsp.setup({
     on_attach = on_attach,
-}
+})
 
 -- React / Javascript / Typescritp
 lspconfig.tsserver.setup {
