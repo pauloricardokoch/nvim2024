@@ -7,7 +7,7 @@ require("mason-lspconfig").setup({
         "golangci_lint_ls",
         "terraformls",
         "tflint",
-        "tsserver",
+        "ts_ls",
         "pylsp",
     },
 })

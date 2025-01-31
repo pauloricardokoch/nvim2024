@@ -50,6 +50,12 @@ require("rose-pine").setup({
     }
 })
 
+require("onedarkpro").setup({
+    options = {
+        transparency = true
+    }
+})
+
 function Set_Catppuccin()
     cmd [[ colorscheme catppuccin ]]
 end
@@ -66,6 +72,10 @@ end
 function Set_Quiet()
     cmd [[ colorscheme quiet ]]
     cmd [[ hi Normal guibg=NONE ctermbg=NONE ]]
+end
+
+function Set_OneDark()
+    cmd [[ colorscheme onedark_vivid ]]
 end
 
 Set_Catppuccin()
