@@ -64,7 +64,7 @@ lspconfig.ts_ls.setup {
 -- Rust
 local rust_on_attach = function(client, bufnr)
     on_attach(client, bufnr)
-    require "completion".on_attach(client)
+    -- require "completion".on_attach(client)
 end
 
 lspconfig.rust_analyzer.setup({
