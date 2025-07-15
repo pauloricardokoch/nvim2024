@@ -10,7 +10,10 @@ return require("packer").startup(function(use)
     use("wbthomason/packer.nvim")
 
     -- Common utilities
-    use("nvim-lua/plenary.nvim")
+    use({
+        "nvim-lua/plenary.nvim",
+        branch = "master"
+    })
 
     -- Nvim tree
     use "nvim-tree/nvim-web-devicons"
@@ -75,6 +78,14 @@ return require("packer").startup(function(use)
         run = ":TSUpdate",
         config = function()
             require("configs/treesitter")
+        end
+    }
+
+    -- Copilot
+    use { "github/copilot.vim" }
+    use { "CopilotC-Nvim/CopilotChat.nvim",
+        config = function()
+            require("configs/copilot")
         end
     }
 
