@@ -43,25 +43,8 @@ require("catppuccin").setup({
     },
 })
 
-require("rose-pine").setup({
-    variant = "main",
-    styles = {
-        transparency = true,
-    }
-})
-
-require("onedarkpro").setup({
-    options = {
-        transparency = true
-    }
-})
-
 function Set_Catppuccin()
     cmd [[ colorscheme catppuccin ]]
-end
-
-function Set_Rosepine()
-    cmd [[ colorscheme rose-pine ]]
 end
 
 function Set_Lunaperche()
@@ -72,10 +55,6 @@ end
 function Set_Quiet()
     cmd [[ colorscheme quiet ]]
     cmd [[ hi Normal guibg=NONE ctermbg=NONE ]]
-end
-
-function Set_OneDark()
-    cmd [[ colorscheme onedark_vivid ]]
 end
 
 Set_Catppuccin()

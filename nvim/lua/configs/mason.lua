@@ -10,4 +10,5 @@ require("mason-lspconfig").setup({
         "ts_ls",
         "pylsp",
     },
+    automatic_enable = false
 })

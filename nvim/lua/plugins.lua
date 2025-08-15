@@ -29,8 +29,6 @@ return require("packer").startup(function(use)
             require("configs/theme")
         end
     }
-    use { "rose-pine/neovim", as = "rose-pine" }
-    use "olimorris/onedarkpro.nvim"
 
     -- Mason
     use {
@@ -99,6 +97,7 @@ return require("packer").startup(function(use)
         end
     }
     use 'leoluz/nvim-dap-go'
+    use 'mfussenegger/nvim-dap-python'
 
     -- Gitsigns
     use { "lewis6991/gitsigns.nvim",
